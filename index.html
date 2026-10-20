@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>클래스로 Classro</title>
+  <meta name="description" content="동네 공방의 원데이 클래스를 앱에서 찾고 바로 예약·결제하는 서비스, 클래스로.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-craft="pottery">
+  <header class="site-header">
+    <a class="logo" href="#top">클래스로</a>
+    <nav aria-label="주요 메뉴">
+      <a href="#flow">예약 흐름</a>
+      <a href="#numbers">숫자로 보기</a>
+      <a href="#goals">4분기 목표</a>
+      <a href="#news">최근 소식</a>
+      <a href="#teams">팀 고민</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-sub">동네 공방의 원데이 클래스, 앱에서 찾고 바로 예약</p>
+        <h1>오늘 저녁,<br>손으로 하나<br>만들어볼까요?</h1>
+        <div class="craft-picker" role="tablist" aria-label="클래스 종류">
+          <button role="tab" class="chip is-active" data-craft="pottery" aria-selected="true">도자기</button>
+          <button role="tab" class="chip" data-craft="baking" aria-selected="false">베이킹</button>
+          <button role="tab" class="chip" data-craft="leather" aria-selected="false">가죽공예</button>
+          <button role="tab" class="chip" data-craft="flower" aria-selected="false">플라워</button>
+          <button role="tab" class="chip" data-craft="drawing" aria-selected="false">드로잉</button>
+          <button role="tab" class="chip" data-craft="perfume" aria-selected="false">향수</button>
+        </div>
+        <p class="craft-line" id="craftLine" aria-live="polite"></p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 300 360" id="shapeSvg">
+          <circle class="sun" cx="220" cy="80" r="46"/>
+          <path id="shapePath" class="shape" d=""/>
+          <rect class="table" x="20" y="316" width="260" height="14" rx="7"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section" id="flow">
+      <h2>찾고, 고르고, 결제까지 한 번에</h2>
+      <ol class="steps">
+        <li><span class="n">1</span><strong>방문</strong><span>앱이나 모바일 웹으로 들어와요</span></li>
+        <li><span class="n">2</span><strong>검색·탐색</strong><span>종류와 동네로 클래스를 찾아요</span></li>
+        <li><span class="n">3</span><strong>클래스 상세</strong><span>공방과 수업 내용을 확인해요</span></li>
+        <li><span class="n">4</span><strong>예약 시작</strong><span>날짜와 인원을 골라요</span></li>
+        <li><span class="n">5</span><strong>결제</strong><span>간편결제로 바로 결제해요</span></li>
+        <li><span class="n">6</span><strong>예약 완료</strong><span>수업 날 공방에서 만나요</span></li>
+      </ol>
+    </section>
+
+    <section class="section tinted" id="numbers">
+      <h2>숫자로 보는 클래스로</h2>
+      <div class="stats">
+        <div class="stat big"><b data-count="420">420</b><span>곳</span><p>제휴 공방 · 서울 280, 경기 110, 기타 30</p></div>
+        <div class="stat"><b data-count="7000">7천</b><span>건</span><p>월 예약 (2026년 9월)</p></div>
+        <div class="stat"><b>42,000</b><span>원</span><p>1인 평균 결제액</p></div>
+        <div class="stat"><b>15</b><span>%</span><p>예약 건당 수수료</p></div>
+      </div>
+
+      <div class="split">
+        <div>
+          <h3>구성원 30명</h3>
+          <div class="team-bar" role="img" aria-label="개발 11, 디자인 4, PO 3, 마케팅 5, 운영·CS 5, 경영지원 2">
+            <i style="flex:11" class="c1"><em>개발 11</em></i>
+            <i style="flex:4" class="c2"><em>디자인 4</em></i>
+            <i style="flex:3" class="c3"><em>PO 3</em></i>
+            <i style="flex:5" class="c4"><em>마케팅 5</em></i>
+            <i style="flex:5" class="c5"><em>운영·CS 5</em></i>
+            <i style="flex:2" class="c6"><em>경영 2</em></i>
+          </div>
+        </div>
+        <table class="info">
+          <caption class="sr">회사 기본 정보</caption>
+          <tr><th scope="row">설립</th><td>2023년 3월</td></tr>
+          <tr><th scope="row">대표</th><td>한서윤</td></tr>
+          <tr><th scope="row">서비스</th><td>iOS·Android 앱, 모바일 웹</td></tr>
+          <tr><th scope="row">수익 모델</th><td>예약 건당 수수료 15%</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="goals">
+      <h2>2026년 4분기, 세 가지를 지켜요</h2>
+      <div class="goal-main">
+        <h3>예약 전환율을 3.9%로 되돌리기</h3>
+        <p>방문 대비 예약 완료율이 최근 4주 동안 떨어졌어요.</p>
+        <div class="bars">
+          <div class="bar-row"><span>이전 4주</span><div class="track"><div class="fill" style="--w:3.9"></div></div><b>3.9%</b></div>
+          <div class="bar-row"><span>최근 4주</span><div class="track"><div class="fill warn" style="--w:2.7"></div></div><b>2.7%</b></div>
+        </div>
+      </div>
+      <div class="goal-side">
+        <div><h3>앱 리뷰 평점 4.5 유지</h3><p>10월 들어 평점이 내려가고 있어요.</p></div>
+        <div><h3>예약 1건당 광고비 9,000원 이하</h3><p>마케팅 CAC 목표예요.</p></div>
+      </div>
+    </section>
+
+    <section class="section tinted" id="news">
+      <h2>최근 있었던 일</h2>
+      <ul class="timeline">
+        <li><time datetime="2026-09-28">9월 28일</time><p><strong>앱 v2.3.0 배포</strong> 결제 화면을 새로 만들고 간편결제를 추가했어요.</p></li>
+        <li><time datetime="2026-09-28">9월 28일 주</time><p><strong>광고 예산 일부 이동</strong> 클릭당 단가가 싸다는 이유로 인스타그램에서 신규 디스플레이 광고 네트워크(display_net)로 옮겼어요.</p></li>
+        <li><time datetime="2026-10">10월</time><p><strong>리뷰 평점 하락, CS 문의 증가</strong></p></li>
+      </ul>
+    </section>
+
+    <section class="section" id="teams">
+      <h2>팀별 고민</h2>
+      <div class="concerns">
+        <article><h3>개발</h3><p>결제 API 응답이 느려졌다는 제보가 있어요. 테스트 커버리지도 낮아요.</p></article>
+        <article><h3>디자인</h3><p>결제 화면을 개편한 뒤 사용성 테스트를 못 했어요. 디자인 가이드는 문서로만 있어요.</p></article>
+        <article><h3>PO</h3><p>VOC가 Slack, 이메일, 앱 리뷰에 흩어져 있어 우선순위를 정하기 어려워요.</p></article>
+        <article><h3>마케팅</h3><p>주간 광고 리포트를 매주 월요일 3시간씩 직접 정리해요.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <strong>클래스로 Classro</strong>
+    <p>수업용 가상 회사입니다. 등장하는 회사·인물·수치는 모두 지어낸 것입니다.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
